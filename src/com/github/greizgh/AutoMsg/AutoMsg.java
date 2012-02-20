@@ -28,7 +28,7 @@ public class AutoMsg extends JavaPlugin {
 		saveConfig();
 		Long period= config.getLong("general.period");
 		log(Level.INFO, plugdesc.getName() + " v"+plugdesc.getVersion()+" enabled.");
-		this.getServer().getScheduler().scheduleAsyncRepeatingTask(this, randomMessage, 1200L, period);
+		this.getServer().getScheduler().scheduleAsyncRepeatingTask(this, randomMessage, period, period);
 	}
 	Runnable randomMessage = new Runnable() {
 		public void run() {
@@ -38,8 +38,11 @@ public class AutoMsg extends JavaPlugin {
 			while (iter.hasNext()) {
 				txt.add(iter.next());
 			}
-			String show = txt.get((int)(Math.random()*(txt.size())));
-			getServer().broadcastMessage(show);
+			if (getServer().getOnlinePlayers().length!=0)
+			{
+				String show = txt.get((int)(Math.random()*(txt.size())));
+				getServer().broadcastMessage(show);
+			}
 		}
 	};
 }
