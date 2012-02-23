@@ -1,4 +1,14 @@
 general:
   period: 12000
+  #pediod between two broadcasting
+  random: true
+  #do we send random messages?
+  timed: false
+  #do we send scheduled messages?
 messages:
-- Thanks for using AutoMsg!
+  random:
+  #list your messages here
+  - Thanks for using AutoMsg!
+  timed:
+  #list of time; text
+  - 2130; Thanks for choosing AutoMsg!
