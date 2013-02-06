@@ -1,6 +1,6 @@
 # AutoMsg
 ## Description
-AutoMsg is a [bukkit](http://bukkit.org) plugin, which broadcast server-wide either random messages or scheduled messages.
+AutoMsg is a [bukkit](http://bukkit.org) plugin, which broadcast server-wide random messages or scheduled messages.
 
 ## Currently implemented features
 * Random messages broadcasting

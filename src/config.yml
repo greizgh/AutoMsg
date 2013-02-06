@@ -1,6 +1,7 @@
 general:
   period: 12000
-  #pediod between two broadcasting
+  #period between two broadcasting
+  #in ticks: 1 s = 20 ticks
   random: true
   #do we send random messages?
   timed: false
@@ -10,5 +11,5 @@ messages:
   #list your messages here
   - Thanks for using AutoMsg!
   timed:
-  #list of time; text
+  #list of: time; text
   - 2130; Thanks for choosing AutoMsg!

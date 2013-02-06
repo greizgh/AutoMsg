@@ -1,5 +1,5 @@
 name: AutoMsg
 author: Greizgh
-version: 0.2
+version: 0.3
 description: Autosend messages in the in-game chat
 main: com.github.greizgh.AutoMsg.AutoMsg

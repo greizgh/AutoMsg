@@ -30,7 +30,7 @@ public class AutoMsg extends JavaPlugin {
 		log(Level.INFO, plugdesc.getName() + " v"+plugdesc.getVersion()+" enabled.");
 		if (config.getBoolean("general.random"))
 		{
-			this.getServer().getScheduler().scheduleAsyncRepeatingTask(this, randomMessage, period, period);
+			this.getServer().getScheduler().runTaskTimerAsynchronously(this, randomMessage, period, period);
 		}
 		if (config.getBoolean("general.timed"))
 		{
@@ -61,7 +61,7 @@ public class AutoMsg extends JavaPlugin {
 				}
 				delay = delay*20/1000;//convert delay in ticks
 				TimedMsg msg = new TimedMsg(this, text);
-				this.getServer().getScheduler().scheduleAsyncRepeatingTask(this, msg, delay, 1728000L);
+				this.getServer().getScheduler().runTaskTimerAsynchronously(this, msg, delay, 1728000L);
 				//Task reoccurs every 24H -> 20ticks * 60 * 60 * 24 = 1728000
 			}
 		}
